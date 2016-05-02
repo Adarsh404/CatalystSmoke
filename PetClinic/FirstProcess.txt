@@ -1,0 +1,46 @@
+    *** Settings ***
+
+Library                 Selenium2Library                   
+
+
+
+*** Variables ***
+${BROWSERTYPE}                 firefox
+${ENVIRONMENTSERVER}          http://52.53.224.195:8080/petclinic
+
+
+*** Keywords ***
+Go to PetClinic URL and Access
+    Opens Browser New
+    Maximize Browser Window
+    
+
+AddOwner to PetClinic
+    Sleep    15s
+    Clicks on Find owner    
+    Close Browser
+
+
+    
+Clicks on Find owner
+    Click Element    xpath=html/body/div[1]/div/div/ul/li[2]/a
+	
+Go to Home page
+    Click Element    xpath=html/body/div[1]/div/div/ul/li[1]/a
+
+Opens Browser New
+     Open Browser             ${ENVIRONMENTSERVER}     ${BROWSERTYPE}
+
+Clicks on step sign Button
+    Click Element    xpath=//*[@name='img_help']
+    Sleep    2s
+
+		
+User Clicks on SignIn button
+    Click Element    xpath=html/body/table[2]/tbody/tr[1]/td/p[1]/a[1]
+	Sleep    2s
+
+
+
+
+

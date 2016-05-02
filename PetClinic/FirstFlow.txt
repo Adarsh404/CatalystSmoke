@@ -1,0 +1,18 @@
+*** Settings ***
+
+Library               Selenium2Library
+Resource              FirstProcess.txt
+
+
+*** Variables ***
+
+*** Keywords ***
+
+*** Test Cases ***
+
+PetClinic Setup Testcase1
+   Go to PetClinic URL and Access
+
+PetClinic Setup Testcase2
+   AddOwner to PetClinic
+   
